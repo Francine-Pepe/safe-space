@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+
+.card {
+  @include card;
+  @include transition;
+  @include flex-center;
+  gap: 1rem;
+  padding: 24px;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @include mobile {
+    padding: 18px;
+  }
+}
