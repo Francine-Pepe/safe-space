@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.container {
+  @include page-container;
+}
+
+.content {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  @include calm-text;
+  margin-bottom: 32px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .card {
+    @include flex-center-column;
+  }
+}
