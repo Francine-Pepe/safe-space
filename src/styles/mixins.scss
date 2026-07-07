@@ -64,8 +64,3 @@
   @include mixins.flex-center;
 }
 
-@mixin mobile {
-  @media (max-width: 600px) {
-    @include mixins.flex-center-column;
-  }
-}
