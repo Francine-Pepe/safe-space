@@ -1,4 +1,4 @@
-@use "./variables";
+@use "./variables" as vars;
 
 * {
   box-sizing: border-box;
@@ -13,8 +13,8 @@ body {
 }
 
 body {
-  background: $background;
-  color: $text;
+  background: vars.$background;
+  color: vars.$text;
 
   font-family:
     system-ui,

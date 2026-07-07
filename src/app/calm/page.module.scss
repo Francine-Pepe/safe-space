@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@use "../../styles/mixins" as mixins;
 
 .container {
   @include page-container;
@@ -17,7 +17,7 @@
 }
 
 .subtitle {
-  @include calm-text;
+  @include mixins.calm-text;
   margin-bottom: 32px;
 }
 
@@ -27,6 +27,6 @@
   gap: 16px;
 
   .card {
-    @include flex-center-column;
+    @include mixins.flex-center-column;
   }
 }
