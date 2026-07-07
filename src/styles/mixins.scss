@@ -1,0 +1,71 @@
+@import "./variables";
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin page-container {
+  min-height: 100vh;
+  padding: 24px;
+  @include flex-center;
+}
+
+@mixin calm-text {
+  color: $text-soft;
+  line-height: 1.6;
+}
+
+@mixin card {
+  background: $surface;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+}
+
+@mixin buttons {
+  border: none;
+  background: $surface;
+  padding: 16px 28px;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+  font-size: 18px;
+  cursor: pointer;
+  color: $text;
+  transition: $transition;
+}
+
+@mixin button-reset {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@mixin transition {
+  transition: $transition;
+}
+
+@mixin calm-text {
+  color: $text-soft;
+  line-height: 1.6;
+}
+
+@mixin page-container {
+  min-height: 100vh;
+  padding: 24px;
+  @include flex-center;
+}
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
