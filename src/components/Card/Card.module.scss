@@ -1,9 +1,9 @@
-@import "../../styles/mixins";
+@use "../../styles/mixins" as mixins;
 
 .card {
-  @include card;
-  @include transition;
-  @include flex-center;
+  @include mixins.card;
+  @include mixins.transition;
+  @include mixins.flex-center;
   gap: 1rem;
   padding: 24px;
   font-size: 18px;
@@ -15,9 +15,5 @@
 
   &:active {
     transform: scale(0.98);
-  }
-
-  @include mobile {
-    padding: 18px;
   }
 }

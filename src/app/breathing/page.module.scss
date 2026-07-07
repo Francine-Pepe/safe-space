@@ -1,13 +1,15 @@
-@import "../../styles/mixins";
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
 
 .container {
-  @include page-container;
+  @include mixins.page-container;
   position: relative;
   overflow: hidden;
 }
 
 .content {
-  @include flex-center-column;
+  @include mixins.flex-center-column;
   width: 100%;
   max-width: 100%;
   text-align: center;
@@ -21,12 +23,12 @@
 }
 
 .subtitle {
-  @include calm-text;
+  @include mixins.calm-text;
   margin-bottom: 50px;
 }
 
 .back {
-  @include buttons;
+  @include mixins.buttons;
   margin-top: 50px;
-  color: $text-soft;
+  color: vars.$text-soft;
 }
