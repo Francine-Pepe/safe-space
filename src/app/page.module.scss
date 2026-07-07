@@ -1,0 +1,33 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.content {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.title {
+  @include flex-center;
+  gap: 2rem;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: $text-soft;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
