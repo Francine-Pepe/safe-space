@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.container {
+  @include page-container;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  @include flex-center-column;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  @include calm-text;
+  margin-bottom: 50px;
+}
+
+.back {
+  @include buttons;
+  margin-top: 50px;
+  color: $text-soft;
+}
