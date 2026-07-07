@@ -1,0 +1,48 @@
+@import "../../styles/mixins";
+
+.wrapper {
+  @include flex-center-column;
+  gap: 4rem;
+}
+
+.circle {
+  @include flex-center-column;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e7e3ff, #d99ff5, #e7e3ff);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  color: $text;
+}
+
+.circle span {
+  font-size: 20px;
+}
+
+.circle strong {
+  font-size: 48px;
+  margin-top: 12px;
+}
+
+.pause {
+  @include buttons;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
