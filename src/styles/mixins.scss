@@ -14,9 +14,11 @@
 }
 
 @mixin page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   padding: 24px;
-  @include mixins.flex-center;
 }
 
 @mixin calm-text {
@@ -53,14 +55,11 @@
   transition: vars.$transition;
 }
 
-@mixin calm-text {
-  color: vars.$text-soft;
-  line-height: 1.6;
-}
-
 @mixin page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   padding: 24px;
-  @include mixins.flex-center;
 }
 
