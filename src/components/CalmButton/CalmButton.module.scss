@@ -1,0 +1,22 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.button {
+  @include flex-center;
+  gap: 2rem;
+  width: 100%;
+  padding: 24px;
+  border: none;
+  border-radius: $radius-lg;
+  background: $primary;
+  color: $text;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: $shadow-soft;
+  transition: $transition;
+
+  &:hover {
+    background: $primary-hover;
+    transform: translateY(-2px);
+  }
+}
