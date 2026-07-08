@@ -2,6 +2,7 @@ import Link from "next/link";
 import Card from "@/components/Card/Card";
 import styles from "./page.module.scss";
 import IconImage from "@/components/IconImage/IconImage";
+import BackButton from "@/components/BackButton/BackButton";
 
 const feelingsContent = [
   {
@@ -27,7 +28,7 @@ const feelingsContent = [
 export default function CalmPage() {
   return (
     <main className={styles.container}>
-      <div className={styles.content}>
+      <section className={styles.content}>
         <h1 className={styles.title}>What feels strongest right now?</h1>
 
         <p className={styles.subtitle}>
@@ -39,12 +40,13 @@ export default function CalmPage() {
             <Link href={item.link} key={index}>
               <Card>
                 <IconImage src={item.icon} alt={item.alt} size={item.size} />
-                {item.alt}
+                <span>{item.alt}</span>
               </Card>
             </Link>
           ))}
+          <BackButton href="/" />
         </div>
-      </div>
+      </section>
     </main>
   );
 }

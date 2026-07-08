@@ -1,0 +1,8 @@
+@use "../../styles/mixins" as mixins;
+
+.container {
+  @include mixins.flex-center-column;
+  @include mixins.page-container;
+  position: relative;
+  overflow: hidden;
+}

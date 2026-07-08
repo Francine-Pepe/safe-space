@@ -1,0 +1,7 @@
+@use "../../styles/mixins" as mixins;
+
+.buttons {
+    @include mixins.buttons;
+    position: relative;
+    right: 0;
+}

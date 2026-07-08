@@ -37,7 +37,7 @@ export default function Home() {
             alt="Safe Space"
             size={56}
           />{" "}
-          Safe Space
+          safe space
         </h1>
 
         <p className={styles.subtitle}>

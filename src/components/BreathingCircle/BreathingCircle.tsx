@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import IconImage from "@/components/IconImage/IconImage";
 
 import styles from "./BreathingCircle.module.scss";
 
@@ -75,7 +76,21 @@ export default function BreathingCircle() {
       </motion.div>
 
       <button className={styles.pause} onClick={() => setPaused(!paused)}>
-        {paused ? "▶ Continue" : "⏸ Pause"}
+        {paused ? (
+          <IconImage
+            src="/images/icons/play.png"
+            alt="play button"
+            size={30}
+            name="Play"
+          />
+        ) : (
+          <IconImage
+            src="/images/icons/pause.png"
+            alt="pause button"
+            size={30}
+            name="Pause"
+          />
+        )}
       </button>
     </div>
   );
