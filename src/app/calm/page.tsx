@@ -3,6 +3,7 @@ import Card from "@/components/Card/Card";
 import styles from "./page.module.scss";
 import IconImage from "@/components/IconImage/IconImage";
 import BackButton from "@/components/BackButton/BackButton";
+import Background from "@/components/Background/Background";
 
 const feelingsContent = [
   {
@@ -28,6 +29,7 @@ const feelingsContent = [
 export default function CalmPage() {
   return (
     <main className={styles.container}>
+      <Background variant="calm" />
       <section className={styles.content}>
         <h1 className={styles.title}>What feels strongest right now?</h1>
 

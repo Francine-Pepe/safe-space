@@ -1,0 +1,53 @@
+@use "@/styles/variables" as vars;
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.home {
+  background-image: url("/images/backgrounds/home.svg");
+}
+.calm {
+  background-image: url("/images/backgrounds/calm.svg");
+}
+
+.breathing {
+  background: linear-gradient(
+    135deg,
+    vars.$air-blue,
+    vars.$sky-blue,
+    vars.$mint
+  );
+  background-image: url("/images/backgrounds/breathing.svg");
+}
+
+/* .thoughts {
+  background-image: url("/images/backgrounds/thoughts.svg");
+}
+
+.comfort {
+  background-image: url("/images/backgrounds/comfort.svg");
+}
+
+.sounds {
+  background-image: url("/images/backgrounds/sounds.svg");
+} */

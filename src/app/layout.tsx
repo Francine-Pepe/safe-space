@@ -1,12 +1,12 @@
 import "@/styles/globals.scss";
-import { Playwrite_ID, Open_Sans } from "next/font/google";
+import { Playwrite_PE, Open_Sans } from "next/font/google";
 
 export const metadata = {
   title: "Safe Space",
   description: "A calm place when things feel too much",
 };
 
-const headingFont = Playwrite_ID({
+const headingFont = Playwrite_PE({
   weight: "400",
   variable: "--font-heading",
 });

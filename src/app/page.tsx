@@ -3,6 +3,7 @@ import CalmButton from "@/components/CalmButton/CalmButton";
 import Card from "@/components/Card/Card";
 import styles from "./page.module.scss";
 import IconImage from "@/components/IconImage/IconImage";
+import Background from "@/components/Background/Background";
 
 const cardsContent = [
   {
@@ -30,7 +31,8 @@ const cardsContent = [
 export default function Home() {
   return (
     <main className={styles.container}>
-      <div className={styles.content}>
+      <Background variant="home" />
+      <section className={styles.content}>
         <h1 className={styles.title}>
           <IconImage
             src="/images/icons/safeSpace.png"
@@ -55,15 +57,15 @@ export default function Home() {
           </CalmButton>
         </Link>
 
-        <div className={styles.cards}>
+        <section className={styles.cards}>
           {cardsContent.map((item, index) => (
             <Card key={index}>
               <IconImage src={item.icon} alt={item.alt} size={item.size} />
               {item.alt}
             </Card>
           ))}
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
   );
 }

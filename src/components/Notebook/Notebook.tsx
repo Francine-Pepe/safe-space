@@ -19,6 +19,7 @@ export default function Notebook() {
       />
 
       {saved && <span className={styles.saved}>✓ Saved</span>}
+
       <div className={styles.notebook_actions}>
         <ExportPDF text={value} />
         <BackButton href="/calm" />

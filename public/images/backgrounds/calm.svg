@@ -1,0 +1,100 @@
+<svg
+  width="1200"
+  height="900"
+  viewBox="0 0 1200 900"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <!-- soft lavender corner -->
+  <path
+    d="
+      M0 0
+      C250 50 350 200 280 360
+      C220 500 80 520 0 450
+      V0Z
+    "
+    fill="#E9DFFF"
+  />
+
+
+  <!-- blue calm cloud -->
+  <path
+    d="
+      M760 0
+      C980 -40 1240 120 1160 330
+      C1100 480 850 450 760 300
+      C700 200 690 50 760 0Z
+    "
+    fill="#DFF3FF"
+  />
+
+
+  <!-- warm bottom area -->
+  <path
+    d="
+      M0 700
+      C220 600 420 760 650 720
+      C900 680 1050 580 1200 700
+      V900
+      H0Z
+    "
+    fill="#FFEBDD"
+  />
+
+
+  <!-- floating emotion bubbles -->
+
+  <circle
+    cx="380"
+    cy="260"
+    r="45"
+    fill="#FFFFFF"
+    opacity="0.6"
+  />
+
+  <circle
+    cx="900"
+    cy="520"
+    r="60"
+    fill="#FFFFFF"
+    opacity="0.45"
+  />
+
+  <circle
+    cx="550"
+    cy="650"
+    r="25"
+    fill="#F7CBE8"
+    opacity="0.8"
+  />
+
+  <!-- tiny stars -->
+
+  <circle
+    cx="250"
+    cy="600"
+    r="8"
+    fill="#FFFFFF"
+  />
+
+  <circle
+    cx="1030"
+    cy="420"
+    r="10"
+    fill="#FFDFA3"
+  />
+
+  <!-- gentle wave -->
+  <path
+    d="
+      M0 520
+      C200 450 350 550 520 520
+      C720 480 900 420 1200 500
+    "
+    stroke="#FFFFFF"
+    stroke-width="3"
+    opacity="0.5"
+  />
+
+</svg>

@@ -2,12 +2,13 @@
 @use "../../styles/mixins" as mixins;
 
 .paper {
+  position: relative;
   width: 100%;
   min-height: 500px;
   box-sizing: border-box;
-  padding: 1.6rem 2rem 2rem 3.5rem;
+  padding: 1.6rem 2rem 5rem 3.5rem;
   border-radius: vars.$radius-sm;
-  box-shadow: vars.$shadow-soft;
+  box-shadow: vars.$shadow-strong;
   background:
     linear-gradient(
       to right,
@@ -44,4 +45,25 @@
   position: absolute;
   right: 2rem;
   bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .paper {
+    padding: 1.6rem 1rem 1.5rem 3.5rem;
+  }
+
+  .input {
+    min-height: 60vh;
+    font-size: 18px;
+  }
+
+  .notebook_actions {
+    position: static;
+    margin-top: 1.5rem;
+    align-items: stretch;
+  }
+
+  .notebook_actions button {
+    width: 100%;
+  }
 }

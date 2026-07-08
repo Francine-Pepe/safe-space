@@ -1,0 +1,17 @@
+@mixin calm-background {
+  background: linear-gradient(135deg, #e8f3ff, #f7f2ff, #e9fff5);
+  background-size: 300% 300%;
+  animation: calmMove 20s ease infinite;
+}
+
+@keyframes calmMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

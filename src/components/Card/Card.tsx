@@ -5,5 +5,5 @@ type CardProps = {
 };
 
 export default function Card({ children }: CardProps) {
-  return <div className={styles.card}>{children}</div>;
+  return <section className={styles.card}>{children}</section>;
 }
