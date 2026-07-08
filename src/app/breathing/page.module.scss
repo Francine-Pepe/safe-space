@@ -28,7 +28,9 @@
 }
 
 .back {
+  @include mixins.flex-center;
   @include mixins.buttons;
+  gap: 1rem;
   margin-top: 50px;
   color: vars.$text-soft;
 }

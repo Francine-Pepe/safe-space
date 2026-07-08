@@ -1,6 +1,6 @@
-import Link from "next/link";
 import BreathingCircle from "@/components/BreathingCircle/BreathingCircle";
 import styles from "./page.module.scss";
+import BackButton from "@/components/BackButton/BackButton";
 
 export default function BreathingPage() {
   return (
@@ -14,9 +14,7 @@ export default function BreathingPage() {
 
         <BreathingCircle />
 
-        <Link href="/" className={styles.back}>
-          ← Back
-        </Link>
+        <BackButton href="/calm" />
       </div>
     </main>
   );
