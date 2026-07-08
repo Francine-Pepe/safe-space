@@ -1,0 +1,64 @@
+<svg 
+  width="1200" 
+  height="800" 
+  viewBox="0 0 1200 800" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <!-- Soft blue cloud -->
+  <path
+    d="M150 180
+    C80 80, 250 20, 370 120
+    C480 40, 650 120, 600 260
+    C520 360, 180 330, 150 180Z"
+    fill="#CFE8FF"
+    opacity="0.75"
+  />
+
+
+  <!-- Lavender shape -->
+  <path
+    d="M850 80
+    C980 20, 1160 120, 1100 260
+    C1050 380, 820 360, 760 240
+    C720 160, 780 110, 850 80Z"
+    fill="#E6D8FF"
+    opacity="0.8"
+  />
+
+
+  <!-- Green calm area -->
+  <path
+    d="M700 650
+    C780 520, 1100 540, 1200 700
+    L1200 800
+    L550 800
+    C560 730, 620 690, 700 650Z"
+    fill="#DDF5E7"
+    opacity="0.85"
+  />
+
+
+  <!-- Warm bottom area -->
+  <path
+    d="M0 650
+    C180 520, 350 650, 500 700
+    C600 740, 650 800, 650 800
+    L0 800Z"
+    fill="#FFE8D6"
+    opacity="0.8"
+  />
+
+
+  <!-- Small stars -->
+  <circle cx="220" cy="420" r="8" fill="#F6C8E8"/>
+  <circle cx="1040" cy="430" r="10" fill="#FFDFA3"/>
+  <circle cx="960" cy="120" r="6" fill="#FFFFFF"/>
+
+
+  <!-- Floating dots -->
+  <circle cx="420" cy="160" r="12" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="760" cy="420" r="15" fill="#FFFFFF" opacity="0.6"/>
+
+</svg>

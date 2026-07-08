@@ -1,0 +1,87 @@
+<svg
+  width="1200"
+  height="900"
+  viewBox="0 0 1200 900"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <!-- sky base -->
+  <rect
+    width="1200"
+    height="900"
+    fill="#EEF8FF"
+  />
+
+
+  <!-- soft clouds -->
+
+  <path
+    d="
+    M120 230
+    C120 150 240 120 310 180
+    C370 80 560 130 560 250
+    C560 330 200 340 120 230Z"
+    fill="#D9F0FF"
+  />
+
+
+  <path
+    d="
+    M750 150
+    C780 70 920 80 960 170
+    C1080 120 1180 240 1100 330
+    C980 420 760 320 750 150Z"
+    fill="#E8F5FF"
+  />
+
+
+  <!-- breathing waves -->
+
+  <path
+    d="
+    M0 600
+    C200 520 350 680 600 600
+    C850 520 1000 680 1200 580"
+    stroke="#B9DFF5"
+    stroke-width="4"
+    opacity="0.8"
+  />
+
+
+  <path
+    d="
+    M0 650
+    C200 570 350 730 600 650
+    C850 570 1000 730 1200 630"
+    stroke="#D2ECFA"
+    stroke-width="3"
+  />
+
+
+  <!-- floating air bubbles -->
+
+  <circle
+    cx="250"
+    cy="480"
+    r="18"
+    fill="#FFFFFF"
+    opacity="0.8"
+  />
+
+  <circle
+    cx="950"
+    cy="500"
+    r="30"
+    fill="#FFFFFF"
+    opacity="0.5"
+  />
+
+  <circle
+    cx="700"
+    cy="220"
+    r="12"
+    fill="#FFFFFF"
+  />
+
+</svg>
