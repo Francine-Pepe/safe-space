@@ -1,8 +1,19 @@
+@use "../../styles/mixins" as mixins;
+
+.container {
+  @include mixins.flex-center;
+  gap: 0.75rem;
+}
+
 .wrapper {
+  @include mixins.flex-center;
   position: relative;
-  display: inline-block;
 }
 
 .image {
   object-fit: contain;
+}
+
+.name {
+  text-align: center;
 }
