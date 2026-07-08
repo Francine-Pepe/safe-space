@@ -1,22 +1,29 @@
 import "@/styles/globals.scss";
+import { Playwrite_ID, Open_Sans } from "next/font/google";
 
 export const metadata = {
   title: "Safe Space",
   description: "A calm place when things feel too much",
 };
 
+const headingFont = Playwrite_ID({
+  weight: "400",
+  variable: "--font-heading",
+});
+
+const bodyFont = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
