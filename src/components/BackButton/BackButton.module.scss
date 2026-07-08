@@ -1,0 +1,10 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.back {
+  @include mixins.buttons;
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+  color: vars.$text-soft;
+}
