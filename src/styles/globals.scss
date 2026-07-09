@@ -38,3 +38,9 @@ h1 {
   font-weight: vars.$heading-weight-h1;
   font-size: 2rem;
 }
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+}

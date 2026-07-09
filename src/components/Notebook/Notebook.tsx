@@ -24,7 +24,11 @@ export default function Notebook() {
 
       <section className={styles.notebook_actions}>
         <BackButton href="/calm" />
-        <ExportPDF text={value} />
+        <ExportPDF
+          text={value}
+          title="Safe Space - Thoughts"
+          filename="safe-space-thoughts.pdf"
+        />
       </section>
     </div>
   );

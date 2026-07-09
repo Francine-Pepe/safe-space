@@ -1,11 +1,10 @@
-@use "../../styles/variables" as vars;
-@use "../../styles/mixins" as mixins;
+@use "@/styles/variables" as vars;
+@use "@/styles/mixins" as mixins;
 
 .wrapper {
   @include mixins.flex-center-column;
   gap: 2rem;
   width: 100%;
-  
 }
 
 .paper {
@@ -25,8 +24,8 @@
     ),
     repeating-linear-gradient(
       to bottom,
-      transparent 0,
-      transparent calc(vars.$line-height - 1px),
+      vars.$paper 0,
+      vars.$paper calc(vars.$line-height - 1px),
       #dddddd calc(vars.$line-height - 1px),
       #dddddd vars.$line-height
     );

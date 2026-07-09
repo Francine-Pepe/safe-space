@@ -31,3 +31,9 @@
     @include mixins.flex-center-column;
   }
 }
+
+@media (max-width: 600px) {
+  .options {
+    width: 100%;
+  }
+}

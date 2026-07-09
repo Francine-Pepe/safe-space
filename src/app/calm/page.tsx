@@ -8,19 +8,19 @@ import Background from "@/components/Background/Background";
 const feelingsContent = [
   {
     icon: "/images/icons/tired.png",
-    alt: "Tired",
+    alt: "I feel tired. I need to breathe",
     size: 30,
     link: "/breathing",
   },
   {
     icon: "/images/icons/thoughts.png",
-    alt: "Thoughts",
+    alt: "My mind is full. I need to write or draw",
     size: 30,
     link: "/journal",
   },
   {
     icon: "/images/icons/tooMuch.png",
-    alt: "Too Much",
+    alt: "I need to calm down",
     size: 30,
     link: "/too-much",
   },

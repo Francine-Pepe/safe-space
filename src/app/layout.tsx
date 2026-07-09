@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import "@/styles/globals.scss";
 import { Playwrite_PE, Open_Sans } from "next/font/google";
 
@@ -23,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
