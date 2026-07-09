@@ -29,9 +29,12 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1,
+h2 {
   font-family: vars.$heading-font-family;
+}
+
+h1 {
   font-weight: vars.$heading-weight-h1;
   font-size: 2rem;
 }
-
