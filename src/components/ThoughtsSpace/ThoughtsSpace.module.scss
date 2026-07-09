@@ -1,0 +1,32 @@
+@use "@/styles/variables" as vars;
+@use "@/styles/mixins" as mixins;
+
+.container {
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  button {
+    @include mixins.buttons;
+    @include mixins.flex-center;
+    gap: 1rem;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.active {
+  background: vars.$primary-soft !important;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}

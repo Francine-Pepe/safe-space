@@ -1,0 +1,29 @@
+@use "@/styles/variables" as vars;
+@use "@/styles/mixins" as mixins;
+
+.footer {
+  @include mixins.flex-center-column;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  color: vars.$text-soft;
+  font-size: 14px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  span {
+    color: #d98b9a;
+    font-size: 18px;
+  }
+
+  a {
+    color: vars.$text;
+    text-decoration: none;
+    transition: vars.$transition;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
