@@ -16,21 +16,26 @@ export default function DrawingCanvas() {
 
     if (!currentCanvas) return;
 
-    setCanvas(currentCanvas);
+    // make a non-null local copy for use in closures to satisfy TypeScript
+    const canvasEl = currentCanvas;
+
+    setCanvas(canvasEl);
 
     const ctx = currentCanvas.getContext("2d");
 
     if (!ctx) return;
 
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "#6B6B6B";
+    const drawingContext = ctx;
+
+    drawingContext.lineWidth = 4;
+    drawingContext.lineCap = "round";
+    drawingContext.lineJoin = "round";
+    drawingContext.strokeStyle = "#6B6B6B";
 
     let drawing = false;
 
     function getPosition(event: MouseEvent | TouchEvent) {
-      const rect = currentCanvas.getBoundingClientRect();
+      const rect = canvasEl.getBoundingClientRect();
 
       if ("touches" in event) {
         return {
@@ -52,9 +57,9 @@ export default function DrawingCanvas() {
 
       const position = getPosition(event);
 
-      ctx.beginPath();
+      drawingContext.beginPath();
 
-      ctx.moveTo(position.x, position.y);
+      drawingContext.moveTo(position.x, position.y);
     }
 
     function draw(event: MouseEvent | TouchEvent) {
@@ -62,45 +67,45 @@ export default function DrawingCanvas() {
 
       const position = getPosition(event);
 
-      ctx.lineTo(position.x, position.y);
+      drawingContext.lineTo(position.x, position.y);
 
-      ctx.stroke();
+      drawingContext.stroke();
     }
 
     function stopDrawing() {
       drawing = false;
 
-      ctx.closePath();
+      drawingContext.closePath();
     }
 
-    currentCanvas.addEventListener("mousedown", startDrawing);
+    canvasEl.addEventListener("mousedown", startDrawing);
 
-    currentCanvas.addEventListener("mousemove", draw);
+    canvasEl.addEventListener("mousemove", draw);
 
-    currentCanvas.addEventListener("mouseup", stopDrawing);
+    canvasEl.addEventListener("mouseup", stopDrawing);
 
-    currentCanvas.addEventListener("mouseleave", stopDrawing);
+    canvasEl.addEventListener("mouseleave", stopDrawing);
 
-    currentCanvas.addEventListener("touchstart", startDrawing);
+    canvasEl.addEventListener("touchstart", startDrawing);
 
-    currentCanvas.addEventListener("touchmove", draw);
+    canvasEl.addEventListener("touchmove", draw);
 
-    currentCanvas.addEventListener("touchend", stopDrawing);
+    canvasEl.addEventListener("touchend", stopDrawing);
 
     return () => {
-      currentCanvas.removeEventListener("mousedown", startDrawing);
+      canvasEl.removeEventListener("mousedown", startDrawing);
 
-      currentCanvas.removeEventListener("mousemove", draw);
+      canvasEl.removeEventListener("mousemove", draw);
 
-      currentCanvas.removeEventListener("mouseup", stopDrawing);
+      canvasEl.removeEventListener("mouseup", stopDrawing);
 
-      currentCanvas.removeEventListener("mouseleave", stopDrawing);
+      canvasEl.removeEventListener("mouseleave", stopDrawing);
 
-      currentCanvas.removeEventListener("touchstart", startDrawing);
+      canvasEl.removeEventListener("touchstart", startDrawing);
 
-      currentCanvas.removeEventListener("touchmove", draw);
+      canvasEl.removeEventListener("touchmove", draw);
 
-      currentCanvas.removeEventListener("touchend", stopDrawing);
+      canvasEl.removeEventListener("touchend", stopDrawing);
     };
   }, []);
 
@@ -133,7 +138,12 @@ export default function DrawingCanvas() {
         />
 
         <button onClick={clearCanvas} className={styles.button}>
-          <IconImage src="/images/icons/clear.png" alt="erase the drawing" size={30} name="Erase" />
+          <IconImage
+            src="/images/icons/clear.png"
+            alt="erase the drawing"
+            size={30}
+            name="Erase"
+          />
         </button>
       </section>
     </div>
