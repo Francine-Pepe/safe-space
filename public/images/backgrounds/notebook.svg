@@ -1,0 +1,167 @@
+<svg
+    width="1200"
+    height="900"
+    viewBox="0 0 1200 900"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <!-- warm desk -->
+
+    <rect
+        width="1200"
+        height="900"
+        fill="#F7F1E8" />
+
+    <!-- subtle paper stain -->
+
+    <circle
+        cx="600"
+        cy="450"
+        r="290"
+        fill="#FFF8EF"
+        opacity=".65" />
+
+    <!-- flower -->
+
+    <g
+        transform="translate(120 90)"
+        stroke="#D7A5B7"
+        stroke-width="3"
+        stroke-linecap="round">
+
+        <circle
+            cx="40"
+            cy="20"
+            r="10" />
+        <circle
+            cx="20"
+            cy="40"
+            r="10" />
+        <circle
+            cx="40"
+            cy="60"
+            r="10" />
+        <circle
+            cx="60"
+            cy="40"
+            r="10" />
+        <circle
+            cx="40"
+            cy="40"
+            r="6"
+            fill="#F8DDE5" />
+
+    </g>
+
+    <!-- leaf -->
+
+    <g
+        transform="translate(1020 120)"
+        stroke="#9FC4A4"
+        stroke-width="3"
+        stroke-linecap="round">
+
+        <path
+            d="M40 70
+            C10 50 10 15 40 0
+            C70 15 70 50 40 70Z" />
+
+        <path d="M40 5 L40 65" />
+
+    </g>
+
+    <!-- coffee -->
+
+    <g
+        transform="translate(1010 650)"
+        stroke="#C7A58C"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <path
+            d="M0 0 H45 V35
+            C45 47 35 57 23 57
+            C11 57 0 47 0 35Z" />
+
+        <path
+            d="M45 10
+            H56
+            C63 10 67 14 67 21
+            C67 28 63 32 56 32
+            H45" />
+
+        <path d="M10 -10 C6 -18 14 -24 10 -32" />
+        <path d="M22 -10 C18 -18 26 -24 22 -32" />
+
+    </g>
+
+    <!-- paperclip -->
+
+    <g
+        transform="translate(140 700)"
+        stroke="#BEBEBE"
+        stroke-width="3">
+
+        <path
+            d="
+            M15 5
+            C5 5 5 20 15 20
+            H32
+            C42 20 42 0 25 0
+            H15
+            C0 0 0 30 15 30
+            H28" />
+
+    </g>
+
+    <!-- pencil -->
+
+    <g
+        transform="translate(940 320)"
+        stroke="#C79C72"
+        stroke-width="3">
+
+        <line
+            x1="0"
+            y1="0"
+            x2="90"
+            y2="90" />
+
+        <line
+            x1="8"
+            y1="-8"
+            x2="98"
+            y2="82" />
+
+    </g>
+
+    <!-- tiny stars -->
+
+    <circle
+        cx="310"
+        cy="720"
+        r="5"
+        fill="#F8D79D" />
+
+    <circle
+        cx="890"
+        cy="170"
+        r="5"
+        fill="#F8D79D" />
+
+    <!-- little dots -->
+
+    <circle
+        cx="520"
+        cy="170"
+        r="3"
+        fill="#D8D8D8" />
+
+    <circle
+        cx="700"
+        cy="760"
+        r="3"
+        fill="#D8D8D8" />
+
+</svg>
