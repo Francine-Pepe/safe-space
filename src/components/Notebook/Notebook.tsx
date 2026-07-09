@@ -10,20 +10,22 @@ export default function Notebook() {
   const { value, setValue, saved } = useAutoSave("safe-space-thoughts");
 
   return (
-    <section className={styles.paper}>
-      <textarea
-        className={styles.input}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder="Write whatever is in your mind..."
-      />
+    <div className={styles.wrapper}>
+      <section className={styles.paper}>
+        <textarea
+          className={styles.input}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="Write whatever is in your mind..."
+        />
 
-      {saved && <span className={styles.saved}>✓ Saved</span>}
+        {saved && <span className={styles.saved}>✓ Saved</span>}
+      </section>
 
-      <div className={styles.notebook_actions}>
-        <ExportPDF text={value} />
+      <section className={styles.notebook_actions}>
         <BackButton href="/calm" />
-      </div>
-    </section>
+        <ExportPDF text={value} />
+      </section>
+    </div>
   );
 }
