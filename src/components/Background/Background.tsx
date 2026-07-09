@@ -4,6 +4,7 @@ type BackgroundVariant =
   | "home"
   | "calm"
   | "breathing"
+  | "notebook"
   | "thoughts"
   | "comfort"
   | "sounds";
