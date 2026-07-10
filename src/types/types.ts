@@ -36,6 +36,14 @@ export interface CardContent {
   size?: number;
 }
 
+export interface CalmButtonContent {
+  href: string;
+  src: string;
+  alt: string;
+  size: number;
+  label: string;
+}
+
 export interface CalmButtonProps {
   children: ReactNode;
 }
@@ -92,4 +100,9 @@ export interface ThoughtsTabButton {
   action: ThoughtsTab;
   icon: string;
   alt: string;
+}
+
+export interface PlayPauseButton {
+  play: IconImageProps;
+  pause: IconImageProps;
 }

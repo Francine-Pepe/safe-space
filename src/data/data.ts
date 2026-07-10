@@ -4,7 +4,9 @@ import type {
   FooterContent,
   BreathingPhase,
   NotebookConfig,
-  ThoughtsTabButton
+  ThoughtsTabButton,
+  CalmButtonContent,
+  PlayPauseButton,
 } from "@/types/types";
 
 /* home data - app/page */
@@ -16,7 +18,7 @@ export const homeImage: IconImageProps = {
   name: "safe space",
 };
 
-export const overwhelmedButton: IconImageProps = {
+export const overwhelmedButton: CalmButtonContent = {
   href: "/calm",
   src: "/images/icons/overwhelmed.png",
   alt: "Overwhelmed button",
@@ -52,6 +54,8 @@ export const homeCards: CardContent[] = [
 export const backButtonImage: IconImageProps = {
   src: "/images/icons/back.png",
   alt: "Back button",
+  name: "Back",
+  size: 30,
 };
 
 /* BreathingCircle */
@@ -79,10 +83,7 @@ export const phases: BreathingPhase[] = [
   },
 ];
 
-export const playPauseButton: {
-  play: IconImageProps;
-  pause: IconImageProps;
-} = {
+export const playPauseButton: PlayPauseButton = {
   play: {
     src: "/images/icons/play.png",
     alt: "play button",
