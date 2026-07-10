@@ -1,13 +1,13 @@
 "use client";
 
 import { useAutoSave } from "@/hooks/useAutoSave";
-
-import styles from "./Notebook.module.scss";
 import ExportPDF from "../ExportPDF/ExportPDF";
 import BackButton from "../BackButton/BackButton";
+import { notebookConfig } from "@/data/data";
+import styles from "./Notebook.module.scss";
 
 export default function Notebook() {
-  const { value, setValue, saved } = useAutoSave("safe-space-thoughts");
+  const { value, setValue, saved } = useAutoSave(notebookConfig.storageKey);
 
   return (
     <div className={styles.wrapper}>
@@ -15,8 +15,8 @@ export default function Notebook() {
         <textarea
           className={styles.input}
           value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder="Write whatever is in your mind..."
+          onChange={(event) => setValue(event.target.value)}
+          placeholder={notebookConfig.placeholder}
         />
 
         {saved && <span className={styles.saved}>✓ Saved</span>}
@@ -24,10 +24,11 @@ export default function Notebook() {
 
       <section className={styles.notebook_actions}>
         <BackButton href="/calm" />
+
         <ExportPDF
           text={value}
-          title="Safe Space - Thoughts"
-          filename="safe-space-thoughts.pdf"
+          title={notebookConfig.pdfTitle}
+          filename={notebookConfig.pdfFilename}
         />
       </section>
     </div>

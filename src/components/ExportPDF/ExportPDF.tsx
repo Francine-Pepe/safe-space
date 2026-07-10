@@ -3,13 +3,8 @@
 import jsPDF from "jspdf";
 import IconImage from "../IconImage/IconImage";
 import styles from "./ExportPDF.module.scss";
-
-type ExportPDFProps = {
-  text?: string;
-  canvas?: HTMLCanvasElement | null;
-  title?: string;
-  filename?: string;
-};
+import type { ExportPDFProps } from "@/types/types";
+import { pdfContentButton } from "@/data/data";
 
 export default function ExportPDF({
   text,
@@ -46,10 +41,10 @@ export default function ExportPDF({
   return (
     <button onClick={createPDF} className={styles.buttons}>
       <IconImage
-        src="/images/icons/export_pdf.png"
-        alt="Export PDF"
-        name="Export PDF"
-        size={24}
+        src={pdfContentButton.src}
+        alt={pdfContentButton.alt}
+        name={pdfContentButton.name}
+        size={pdfContentButton.size}
       />
     </button>
   );

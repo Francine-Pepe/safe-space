@@ -1,12 +1,8 @@
 import Link from "next/link";
 import IconImage from "../IconImage/IconImage";
 import styles from "./BackButton.module.scss";
-
-type BackButtonProps = {
-  href: string;
-  text?: string;
-  size?: number;
-};
+import type { BackButtonProps } from "@/types/types";
+import { backButtonImage } from "@/data/data";
 
 export default function BackButton({
   href,
@@ -16,7 +12,7 @@ export default function BackButton({
   return (
     <Link href={href} className={styles.back}>
       <IconImage
-        src="/images/icons/back.png"
+        src={backButtonImage.src}
         alt={text}
         size={size}
         name={text}

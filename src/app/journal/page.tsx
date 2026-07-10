@@ -1,4 +1,3 @@
-import Notebook from "@/components/Notebook/Notebook";
 import React from "react";
 import styles from "./page.module.scss";
 import Background from "@/components/Background/Background";
