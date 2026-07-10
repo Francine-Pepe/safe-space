@@ -3,31 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import IconImage from "@/components/IconImage/IconImage";
-
 import styles from "./BreathingCircle.module.scss";
-
-const phases = [
-  {
-    name: "Breathe in",
-    seconds: 4,
-    scale: 1.35,
-  },
-  {
-    name: "Hold",
-    seconds: 4,
-    scale: 1.35,
-  },
-  {
-    name: "Breathe out",
-    seconds: 4,
-    scale: 1,
-  },
-  {
-    name: "Rest",
-    seconds: 4,
-    scale: 1,
-  },
-];
+import { phases, playPauseButton } from "@/data/data";
 
 export default function BreathingCircle() {
   const [phaseIndex, setPhaseIndex] = useState(0);
@@ -58,6 +35,8 @@ export default function BreathingCircle() {
     return () => clearInterval(timer);
   }, [phaseIndex, paused]);
 
+  const button = paused ? playPauseButton.play : playPauseButton.pause;
+
   return (
     <div className={styles.wrapper}>
       <motion.div
@@ -76,21 +55,12 @@ export default function BreathingCircle() {
       </motion.div>
 
       <button className={styles.pause} onClick={() => setPaused(!paused)}>
-        {paused ? (
-          <IconImage
-            src="/images/icons/play.png"
-            alt="play button"
-            size={30}
-            name="Play"
-          />
-        ) : (
-          <IconImage
-            src="/images/icons/pause.png"
-            alt="pause button"
-            size={30}
-            name="Pause"
-          />
-        )}
+        <IconImage
+          src={button.src}
+          alt={button.alt}
+          size={button.size}
+          name={button.name}
+        />
       </button>
     </div>
   );

@@ -1,17 +1,5 @@
 import styles from "./Background.module.scss";
-
-type BackgroundVariant =
-  | "home"
-  | "calm"
-  | "breathing"
-  | "notebook"
-  | "thoughts"
-  | "comfort"
-  | "sounds";
-
-type BackgroundProps = {
-  variant?: BackgroundVariant;
-};
+import type { BackgroundProps } from "@/types/types";
 
 export default function Background({ variant = "home" }: BackgroundProps) {
   return (

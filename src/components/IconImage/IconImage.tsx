@@ -1,12 +1,6 @@
 import Image from "next/image";
 import styles from "./IconImage.module.scss";
-
-type IconImageProps = {
-  src: string;
-  alt: string;
-  size?: number;
-  name?: string;
-};
+import type { IconImageProps } from "@/types/types";
 
 export default function IconImage({
   src,

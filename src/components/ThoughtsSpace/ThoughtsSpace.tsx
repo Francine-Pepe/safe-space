@@ -1,45 +1,29 @@
 "use client";
 
 import { useState } from "react";
+
 import Notebook from "@/components/Notebook/Notebook";
 import DrawingCanvas from "@/components/DrawingCanvas/DrawingCanvas";
 import IconImage from "../IconImage/IconImage";
+import { thoughtsTabs } from "@/data/data";
+import type { ThoughtsTab } from "@/types/types";
 import styles from "./ThoughtsSpace.module.scss";
 
-type Tab = "write" | "draw";
-
-const buttonsContent: {
-  action: Tab;
-  icon: string;
-  alt: string;
-}[] = [
-  {
-    action: "write",
-    icon: "/images/icons/writing.png",
-    alt: "Write",
-  },
-  {
-    action: "draw",
-    icon: "/images/icons/drawing.png",
-    alt: "Draw",
-  },
-];
-
 export default function ThoughtsSpace() {
-  const [activeTab, setActiveTab] = useState<Tab>("write");
+  const [activeTab, setActiveTab] = useState<ThoughtsTab>("write");
 
   return (
     <section className={styles.container}>
       <div className={styles.tabs}>
-        {buttonsContent.map((item) => (
+        {thoughtsTabs.map((tab) => (
           <button
-            key={item.action}
-            className={activeTab === item.action ? styles.active : ""}
-            onClick={() => setActiveTab(item.action)}
+            key={tab.action}
+            className={activeTab === tab.action ? styles.active : ""}
+            onClick={() => setActiveTab(tab.action)}
           >
-            <IconImage src={item.icon} alt={item.alt} size={30} />
+            <IconImage src={tab.icon} alt={tab.alt} size={30} />
 
-            {item.alt}
+            {tab.alt}
           </button>
         ))}
       </div>

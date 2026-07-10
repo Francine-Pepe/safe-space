@@ -1,18 +1,21 @@
 import styles from "./Footer.module.scss";
+import { footerContent } from "@/data/data";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <p>
-        Made with <span aria-label="love">♥</span> and care
+        {footerContent.text}{" "}
+        <span aria-label="love">{footerContent.heart}</span>{" "}
+        {footerContent.ending}
       </p>
 
       <a
-        href="https://www.francinemelopepe.de"
+        href={footerContent.portfolio}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Francine Melo Pêpe
+        {footerContent.author}
       </a>
     </footer>
   );

@@ -13,18 +13,12 @@ export default function DrawingCanvas() {
 
   useEffect(() => {
     const currentCanvas = canvasRef.current;
-
     if (!currentCanvas) return;
-
     // make a non-null local copy for use in closures to satisfy TypeScript
     const canvasEl = currentCanvas;
-
     setCanvas(canvasEl);
-
     const ctx = currentCanvas.getContext("2d");
-
     if (!ctx) return;
-
     const drawingContext = ctx;
 
     drawingContext.lineWidth = 4;
