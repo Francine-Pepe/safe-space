@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import "@/styles/globals.scss";
 import { Playwrite_PE, Open_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Safe Space",
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body>
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
