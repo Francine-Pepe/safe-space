@@ -4,6 +4,13 @@ export type Emotion = "tired" | "thoughts" | "too-much";
 
 export type BreathingPhaseName = "Breathe in" | "Hold" | "Breathe out" | "Rest";
 
+export interface HomeImage {
+  src: string;
+  alt: string;
+  size: number;
+  name: string;
+}
+
 export type BackgroundVariant =
   | "home"
   | "calm"
@@ -23,7 +30,7 @@ export interface IconImageProps {
   size?: number;
   name?: string;
   label?: string;
-  href?: string;
+  /* href?: string; */
 }
 
 export interface CardProps {

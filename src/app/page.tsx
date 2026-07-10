@@ -4,7 +4,6 @@ import Card from "@/components/Card/Card";
 import IconImage from "@/components/IconImage/IconImage";
 import Background from "@/components/Background/Background";
 import { homeImage, homeCards, overwhelmedButton } from "@/data/data";
-
 import styles from "./page.module.scss";
 
 export default function Home() {

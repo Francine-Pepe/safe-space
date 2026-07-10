@@ -7,11 +7,12 @@ import type {
   ThoughtsTabButton,
   CalmButtonContent,
   PlayPauseButton,
+  HomeImage,
 } from "@/types/types";
 
 /* home data - app/page */
 
-export const homeImage: IconImageProps = {
+export const homeImage: HomeImage = {
   src: "/images/icons/safeSpace.png",
   alt: "Safe Space",
   size: 56,
@@ -25,6 +26,8 @@ export const overwhelmedButton: CalmButtonContent = {
   size: 40,
   label: "I feel overwhelmed",
 };
+
+console.log(overwhelmedButton.href);
 
 export const homeCards: CardContent[] = [
   {
