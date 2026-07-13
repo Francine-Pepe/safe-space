@@ -8,6 +8,8 @@ import type {
   CalmButtonContent,
   PlayPauseButton,
   HomeImage,
+  FeelingCard,
+  SoundOption,
 } from "@/types/types";
 
 /* home data - app/page */
@@ -34,21 +36,25 @@ export const homeCards: CardContent[] = [
     icon: "/images/icons/breathe.png",
     alt: "Breathe",
     size: 30,
+    href: "/breathing",
   },
   {
     icon: "/images/icons/brainDump.png",
-    alt: "Brain Dump",
+    alt: "Clear your mind",
     size: 30,
+    href: "/journal",
   },
   {
     icon: "/images/icons/sounds.png",
     alt: "Sounds",
     size: 30,
+    href: "/sounds",
   },
   {
     icon: "/images/icons/comfort.png",
     alt: "Comfort",
     size: 30,
+    href: "/comfort",
   },
 ];
 
@@ -143,3 +149,71 @@ export const thoughtsTabs: ThoughtsTabButton[] = [
     alt: "Draw",
   },
 ];
+
+/* Calm page */
+
+export const feelingsContent: FeelingCard[] = [
+  {
+    icon: "/images/icons/tired.png",
+    alt: "I feel tired. I need to breathe",
+    size: 30,
+    href: "/breathing",
+  },
+  {
+    icon: "/images/icons/thoughts.png",
+    alt: "My mind is full. I need to write or draw",
+    size: 30,
+    href: "/journal",
+  },
+  {
+    icon: "/images/icons/tooMuch.png",
+    alt: "I need to calm down",
+    size: 30,
+    href: "/too-much",
+  },
+];
+
+/* Sound page */
+
+export const soundsContent: SoundOption[] = [
+  {
+    id: "ocean",
+    name: "Ocean Waves",
+    description: "Gentle waves to help you slow down.",
+    video: "/videos/ocean.webm",
+    audio: "/sounds/ocean.mp3",
+  },
+
+  {
+    id: "rain",
+    name: "Rain",
+    description: "Soft rainfall for quiet moments.",
+    video: "/videos/rain.webm",
+    audio: "/sounds/rain.mp3",
+  },
+
+  {
+    id: "forest",
+    name: "Forest",
+    description: "Nature sounds for relaxing moments.",
+    video: "/videos/forest.webm",
+    audio: "/sounds/forest.mp3",
+  },
+  {
+    id: "fireplace",
+    name: "Fireplace",
+    description: "Fire sounds for a cozier environment",
+    video: "/videos/fireplace.webm",
+    audio: "/sounds/fireplace.mp3",
+  },
+];
+
+export const backgrounds = {
+  home: "/images/backgrounds/home.svg",
+  calm: "/images/backgrounds/calm.svg",
+  breathing: "/images/backgrounds/breathing.svg",
+  sounds: "/images/backgrounds/sounds.svg",
+  notebook: "/images/backgrounds/notebook.svg",
+} as const;
+
+export type BackgroundVariant = keyof typeof backgrounds;

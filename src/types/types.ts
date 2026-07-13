@@ -35,12 +35,14 @@ export interface IconImageProps {
 
 export interface CardProps {
   children: ReactNode;
+  href: string;
 }
 
 export interface CardContent {
   icon: string;
   alt: string;
   size?: number;
+  href: string;
 }
 
 export interface CalmButtonContent {
@@ -112,4 +114,43 @@ export interface ThoughtsTabButton {
 export interface PlayPauseButton {
   play: IconImageProps;
   pause: IconImageProps;
+}
+
+export interface FeelingCard {
+  icon: string;
+  alt: string;
+  size: number;
+  href: string;
+}
+
+export interface SoundOption {
+  id: string;
+  name: string;
+  description?: string;
+  video?: string;
+  audio: string;
+  custom?: boolean;
+}
+
+export interface SoundCardProps {
+  sound: SoundOption;
+  isPlaying: boolean;
+  onPlay: () => void;
+}
+
+export interface SoundPlayerProps {
+  isPlaying: boolean;
+  onPlay: () => void;
+  name: string;
+}
+
+export interface StoredSound {
+  id: string;
+  name: string;
+  description: string;
+  audio: Blob;
+}
+
+export interface UploadSoundCardProps {
+  onSelect: (file: File) => Promise<void>;
 }

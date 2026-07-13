@@ -1,11 +1,20 @@
 import styles from "./Background.module.scss";
-import type { BackgroundProps } from "@/types/types";
+import { backgrounds } from "@/data/data";
+import type { BackgroundVariant } from "@/data/data";
 
-export default function Background({ variant = "home" }: BackgroundProps) {
+type BackgroundProps = {
+  variant: BackgroundVariant;
+};
+
+export default function Background({ variant }: BackgroundProps) {
+  const backgroundImage = backgrounds[variant];
+
   return (
     <div
-      className={`${styles.background} ${styles[variant]}`}
-      aria-hidden="true"
+      className={styles.background}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
     />
   );
 }

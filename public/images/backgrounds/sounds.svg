@@ -1,0 +1,110 @@
+<svg
+  width="1200"
+  height="900"
+  viewBox="0 0 1200 900"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+<!-- soft background -->
+
+<rect
+  width="1200"
+  height="900"
+  fill="#EAF6F5"
+/>
+
+
+<!-- soft light -->
+
+<circle
+  cx="250"
+  cy="200"
+  r="180"
+  fill="#D6EEF5"
+  opacity="0.7"
+/>
+
+
+<circle
+  cx="950"
+  cy="700"
+  r="250"
+  fill="#DDF2E5"
+  opacity="0.6"
+/>
+
+
+<!-- waves -->
+
+<path
+  d="
+  M0 600
+  C200 540 350 680 600 610
+  C850 540 1000 650 1200 580
+  V900
+  H0
+  Z"
+  fill="#B9DDE5"
+  opacity="0.35"
+/>
+
+
+<path
+  d="
+  M0 680
+  C250 620 420 760 650 690
+  C900 620 1050 720 1200 660"
+  stroke="#9BCAD6"
+  stroke-width="3"
+  opacity="0.5"
+  fill="none"
+/>
+
+
+<!-- floating bubbles -->
+
+<circle
+  cx="180"
+  cy="450"
+  r="14"
+  fill="#FFFFFF"
+  opacity="0.5"
+/>
+
+
+<circle
+  cx="1050"
+  cy="300"
+  r="20"
+  fill="#FFFFFF"
+  opacity="0.4"
+/>
+
+
+<circle
+  cx="760"
+  cy="150"
+  r="8"
+  fill="#FFFFFF"
+  opacity="0.6"
+/>
+
+
+<!-- little sparkles -->
+
+<path
+  d="
+  M500 250
+  L505 265
+  L520 270
+  L505 275
+  L500 290
+  L495 275
+  L480 270
+  L495 265Z"
+  fill="#C8DFAE"
+/>
+
+
+</svg>

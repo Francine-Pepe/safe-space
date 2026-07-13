@@ -1,30 +1,9 @@
-import Link from "next/link";
 import Card from "@/components/Card/Card";
 import styles from "./page.module.scss";
 import IconImage from "@/components/IconImage/IconImage";
 import BackButton from "@/components/BackButton/BackButton";
 import Background from "@/components/Background/Background";
-
-const feelingsContent = [
-  {
-    icon: "/images/icons/tired.png",
-    alt: "I feel tired. I need to breathe",
-    size: 30,
-    link: "/breathing",
-  },
-  {
-    icon: "/images/icons/thoughts.png",
-    alt: "My mind is full. I need to write or draw",
-    size: 30,
-    link: "/journal",
-  },
-  {
-    icon: "/images/icons/tooMuch.png",
-    alt: "I need to calm down",
-    size: 30,
-    link: "/too-much",
-  },
-];
+import { feelingsContent } from "@/data/data";
 
 export default function CalmPage() {
   return (
@@ -38,13 +17,12 @@ export default function CalmPage() {
         </p>
 
         <div className={styles.options}>
-          {feelingsContent.map((item, index) => (
-            <Link href={item.link} key={index}>
-              <Card>
-                <IconImage src={item.icon} alt={item.alt} size={item.size} />
-                <span>{item.alt}</span>
-              </Card>
-            </Link>
+          {feelingsContent.map((item) => (
+            <Card key={item.alt} href={item.href}>
+              <IconImage src={item.icon} alt={item.alt} size={item.size} />
+
+              <span>{item.alt}</span>
+            </Card>
           ))}
           <BackButton href="/" />
         </div>
