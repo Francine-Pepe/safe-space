@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getSounds } from "@/lib/soundStorage";
 import SoundCard from "@/components/SoundCard/SoundCard";
 import BackButton from "@/components/BackButton/BackButton";
 import Background from "@/components/Background/Background";
@@ -10,38 +9,62 @@ import { soundsContent } from "@/data/data";
 import { useSoundPlayer } from "@/hooks/useSoundPlayer";
 import type { SoundOption } from "@/types/types";
 import styles from "./page.module.scss";
+import { uploadSound, getUploadedSounds, deleteSound } from "@/lib/sounds";
 
 export default function SoundsPage() {
   const [sounds, setSounds] = useState<SoundOption[]>(soundsContent);
   const { playingSound, toggle } = useSoundPlayer();
 
   async function handleUpload(file: File) {
-    const newSound: SoundOption = {
-      id: crypto.randomUUID(),
-      name: file.name.replace(/\.[^/.]+$/, ""),
-      description: "Your personal sound",
-      video: "",
-      audio: URL.createObjectURL(file),
-    };
-    setSounds((previous) => [...previous, newSound]);
+    try {
+      const sound = await uploadSound(file);
+
+      setSounds((previous) => [
+        ...previous,
+
+        {
+          id: sound.id,
+          name: sound.name,
+          description: sound.description,
+          audio: sound.audio_url,
+          custom: true,
+        },
+      ]);
+    } catch (error) {
+      console.error("Upload failed:", JSON.stringify(error, null, 2));
+    }
+  }
+
+  async function handleDelete(id: string, audioUrl: string) {
+    try {
+      await deleteSound(id, audioUrl);
+
+      setSounds((previous) => previous.filter((sound) => sound.id !== id));
+    } catch (error) {
+      console.error("Delete failed:", error);
+    }
   }
 
   useEffect(() => {
-    async function loadSounds() {
-      const stored = await getSounds();
+    async function loadUploadedSounds() {
+      try {
+        const uploadedSounds = await getUploadedSounds();
 
-      const customSounds = stored.map((sound) => ({
-        id: sound.id,
-        name: sound.name,
-        description: sound.description,
-        audio: URL.createObjectURL(sound.audio),
-        custom: true,
-      }));
+        const customSounds = uploadedSounds.map((sound) => ({
+          id: sound.id,
+          name: sound.name,
+          description: sound.description,
+          audio: sound.audio_url,
+          custom: true,
+        }));
 
-      setSounds([...soundsContent, ...customSounds]);
+        setSounds((previous) => [...previous, ...customSounds]);
+      } catch (error) {
+        console.error("Failed to load sounds:", error);
+      }
     }
 
-    loadSounds();
+    loadUploadedSounds();
   }, []);
 
   return (
@@ -60,6 +83,11 @@ export default function SoundsPage() {
               sound={sound}
               isPlaying={playingSound === sound.id}
               onPlay={() => toggle(sound.id, sound.audio)}
+              onDelete={
+                sound.custom
+                  ? () => handleDelete(sound.id, sound.audio)
+                  : undefined
+              }
             />
           ))}
         </section>
