@@ -40,6 +40,11 @@ h1 {
   font-size: 2rem;
 }
 
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
 @media (max-width: 600px) {
   button {
     width: 100%;

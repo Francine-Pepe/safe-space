@@ -1,16 +1,25 @@
+@use "@/styles/mixins" as mixins;
+@use "@/styles/variables" as vars;
+
 .card {
-  min-height: 340px;
-  border: none;
+  min-height: 5rem;
+  border: 1px dashed vars.$primary;
   border-radius: 30px;
-  background: #f6f1ea;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: transparent;
   gap: 1rem;
   padding: 2rem;
   cursor: pointer;
   transition: 0.25s;
+}
+
+.button_text {
+  @include mixins.flex-center-column;
+  padding: 1rem 0;
+
+  h2 {
+    font-family: vars.$body-font-family;
+    font-weight: 100;
+  }
 }
 
 .card:hover {

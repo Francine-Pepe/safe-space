@@ -3,18 +3,15 @@
 import { useEffect, useRef } from "react";
 import SoundPlayer from "../SoundPlayer/SoundPlayer";
 import styles from "./SoundCard.module.scss";
-import type { SoundOption } from "@/types/types";
-
-interface SoundCardProps {
-  sound: SoundOption;
-  isPlaying: boolean;
-  onPlay: () => void;
-}
+import type { SoundCardProps } from "@/types/types";
+import IconImage from "@/components/IconImage/IconImage";
+import { trashIcon } from "@/data/data";
 
 export default function SoundCard({
   sound,
   isPlaying,
   onPlay,
+  onDelete,
 }: SoundCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -61,6 +58,25 @@ export default function SoundCard({
             onPlay={onPlay}
             name={sound.name}
           />
+          {sound.custom && onDelete && (
+            <button
+              className={styles.delete}
+              onClick={(event) => {
+                event.stopPropagation();
+
+                console.log("Deleting:", sound.id);
+
+                onDelete();
+              }}
+              aria-label="Remove sound"
+            >
+              <IconImage
+                src={trashIcon.src}
+                alt={trashIcon.alt}
+                size={trashIcon.size}
+              />
+            </button>
+          )}
         </div>
       </div>
     </article>

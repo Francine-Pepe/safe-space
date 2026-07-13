@@ -9,10 +9,7 @@
 .button {
   @include mixins.flex-center;
   border: none;
-  background: rgba(255, 255, 255, 0.75);
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
+  
   cursor: pointer;
   transition:
     transform 0.2s ease,

@@ -136,6 +136,7 @@ export interface SoundCardProps {
   sound: SoundOption;
   isPlaying: boolean;
   onPlay: () => void;
+  onDelete?: () => void;
 }
 
 export interface SoundPlayerProps {
@@ -153,4 +154,22 @@ export interface StoredSound {
 
 export interface UploadSoundCardProps {
   onSelect: (file: File) => Promise<void>;
+}
+
+export interface ComfortMessage {
+  id: string;
+  message: string;
+  category: "reminder" | "affirmation" | "grounding";
+}
+
+export interface ComfortCardProps {
+  message: ComfortMessage;
+  onNew: () => void;
+  onSave: () => void;
+  isSaved: boolean;
+}
+
+export interface SavedComfortCardProps {
+  message: ComfortMessage;
+  onRemove: () => void;
 }
