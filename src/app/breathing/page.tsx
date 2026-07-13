@@ -16,7 +16,7 @@ export default function BreathingPage() {
 
         <BreathingCircle />
 
-        <BackButton href="/calm" />
+        <BackButton href="/" />
       </div>
     </main>
   );
