@@ -7,6 +7,9 @@ import { homeImage, homeCards, overwhelmedButton } from "@/data/data";
 import styles from "./page.module.scss";
 
 export default function Home() {
+  console.log("button", overwhelmedButton);
+
+  console.log("cards", homeCards);
   return (
     <main className={styles.container}>
       <Background variant="home" />
@@ -39,7 +42,7 @@ export default function Home() {
 
         <section className={styles.cards}>
           {homeCards.map((item, index) => (
-            <Card key={index}>
+            <Card key={index} href={item.href}>
               <IconImage src={item.icon} alt={item.alt} size={item.size} />
 
               {item.alt}
