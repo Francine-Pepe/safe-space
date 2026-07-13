@@ -1,0 +1,88 @@
+@use "@/styles/variables" as vars;
+@use "@/styles/mixins" as mixins;
+
+.container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 4rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  max-width: 600px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: vars.$text;
+  animation: fadeDown 0.6s ease;
+}
+
+.subtitle {
+  max-width: 450px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: vars.$text;
+  opacity: 0.8;
+  animation: fadeDown 0.8s ease;
+}
+
+.savedTitle {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: vars.$text;
+}
+
+.saved {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.empty {
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  color: vars.$text;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding-top: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .saved {
+    gap: 1rem;
+  }
+}
