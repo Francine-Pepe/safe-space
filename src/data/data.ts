@@ -10,6 +10,7 @@ import type {
   HomeImage,
   FeelingCard,
   SoundOption,
+  ComfortMessage,
 } from "@/types/types";
 
 /* home data - app/page */
@@ -40,7 +41,7 @@ export const homeCards: CardContent[] = [
   },
   {
     icon: "/images/icons/brainDump.png",
-    alt: "Clear your mind",
+    alt: "Let it out",
     size: 30,
     href: "/journal",
   },
@@ -208,12 +209,109 @@ export const soundsContent: SoundOption[] = [
   },
 ];
 
+/* Pages backgrounds */
+
 export const backgrounds = {
   home: "/images/backgrounds/home.svg",
   calm: "/images/backgrounds/calm.svg",
   breathing: "/images/backgrounds/breathing.svg",
   sounds: "/images/backgrounds/sounds.svg",
   notebook: "/images/backgrounds/notebook.svg",
+  comfort: "/images/backgrounds/comfort.svg",
 } as const;
 
 export type BackgroundVariant = keyof typeof backgrounds;
+
+/* Sounds card button */
+
+export const uploadCardContent = {
+  src: "/images/icons/add.png",
+  alt: "Add sound",
+  size: 30,
+  title: "Add your own sound",
+  text: "A sound that brings you comfort",
+};
+
+export const trashIcon = {
+  src: "/images/icons/trash.png",
+  alt: "Delete data",
+  size: 30,
+};
+
+/* Comfort messages */
+
+export const comfortMessages: ComfortMessage[] = [
+  {
+    id: "1",
+    message:
+      "You don't need to solve everything right now. Just take care of this moment.",
+    category: "reminder",
+  },
+  {
+    id: "2",
+    message: "It's okay to slow down. Your feelings are allowed to be here.",
+    category: "affirmation",
+  },
+  {
+    id: "3",
+    message: "Take a small breath. You are safe in this moment.",
+    category: "grounding",
+  },
+  {
+    id: "4",
+    message:
+      "One tiny step is enough. You don't have to do everything at once.",
+    category: "reminder",
+  },
+  {
+    id: "5",
+    message:
+      "Rest is not a failure. Your mind and body need gentle moments too.",
+    category: "grounding",
+  },
+  {
+    id: "6",
+    message: "You are doing your best, even when things feel difficult.",
+    category: "reminder",
+  },
+  {
+    id: "7",
+    message: "A difficult moment does not define your whole day.",
+    category: "affirmation",
+  },
+  {
+    id: "8",
+    message: "You can pause. You can breathe. You can begin again.",
+    category: "affirmation",
+  },
+  {
+    id: "9",
+    message:
+      "Your thoughts are visitors. You don't have to follow every one of them.",
+    category: "reminder",
+  },
+  {
+    id: "10",
+    message: "Be gentle with yourself today. You deserve kindness too.",
+    category: "grounding",
+  },
+  {
+    id: "11",
+    message: "It's okay if today looks different from what you expected.",
+    category: "affirmation",
+  },
+  {
+    id: "12",
+    message: "You are allowed to ask for help and take up space.",
+    category: "grounding",
+  },
+];
+
+export const comfortPageContent = {
+  cardSpan: "/images/icons/comfort.png",
+  changeButton: "/images/icons/change.png",
+  buttonAnother: "Another one",
+  saveButton: "Save this",
+  saveIcon: "/images/icons/save_heart.png",
+  size: 30
+}

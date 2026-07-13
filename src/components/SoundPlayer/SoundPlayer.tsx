@@ -3,6 +3,7 @@
 import IconImage from "../IconImage/IconImage";
 import styles from "./SoundPlayer.module.scss";
 import type { SoundPlayerProps } from "@/types/types";
+import { playPauseButton } from "@/data/data";
 
 export default function SoundPlayer({
   isPlaying,
@@ -17,10 +18,9 @@ export default function SoundPlayer({
         aria-label={isPlaying ? `Pause ${name}` : `Play ${name}`}
       >
         <IconImage
-          src={isPlaying ? "/images/icons/pause.png" : "/images/icons/play.png"}
-          alt={isPlaying ? "Pause" : "Play"}
-          size={35}
-          /* name={isPlaying ? "Pause" : "Play"} */
+          src={isPlaying ? playPauseButton.pause.src : playPauseButton.play.src}
+          alt={isPlaying ? playPauseButton.pause.alt : playPauseButton.play.alt}
+          size={playPauseButton.play.size}
         />
       </button>
     </div>

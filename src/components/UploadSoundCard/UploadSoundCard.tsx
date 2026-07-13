@@ -4,6 +4,7 @@ import { useRef } from "react";
 import styles from "./UploadSoundCard.module.scss";
 import IconImage from "../IconImage/IconImage";
 import type { UploadSoundCardProps } from "@/types/types";
+import { uploadCardContent } from "@/data/data";
 
 export default function UploadSoundCard({ onSelect }: UploadSoundCardProps) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -24,11 +25,16 @@ export default function UploadSoundCard({ onSelect }: UploadSoundCardProps) {
   return (
     <>
       <button className={styles.card} onClick={openPicker}>
-        <IconImage src="/images/icons/add.png" alt="Add sound" size={60} />
+        <IconImage
+          src={uploadCardContent.src}
+          alt={uploadCardContent.alt}
+          size={uploadCardContent.size}
+        />
+        <section className={styles.button_text}>
+          <h2>{uploadCardContent.title}</h2>
 
-        <h2>Add your own sound</h2>
-
-        <p>+ A sound that brings you comfort</p>
+          <p>{uploadCardContent.text}</p>
+        </section>
       </button>
 
       <input
