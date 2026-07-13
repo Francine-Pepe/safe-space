@@ -30,7 +30,7 @@ export function useComfortBox() {
     );
   }
 
-  function removeMessage(id: number) {
+  function removeMessage(id: string) {
     const updated = saved.filter((item) => item.id !== id);
 
     setSaved(updated);
@@ -44,9 +44,7 @@ export function useComfortBox() {
 
   return {
     saved,
-
     saveMessage,
-
     removeMessage,
   };
 }
