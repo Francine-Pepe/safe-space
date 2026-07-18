@@ -45,8 +45,13 @@ button {
   background: transparent;
 }
 
-@media (max-width: 600px) {
-  button {
+@media (max-width: 576px) {
+  button, .back {
     width: 100%;
+    align-items: stretch
+  }
+
+  h2 {
+    text-align: center;
   }
 }
