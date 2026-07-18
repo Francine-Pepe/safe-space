@@ -107,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   .content {
     @include mixins.flex-center-column;
     text-align: center;
