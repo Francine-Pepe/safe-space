@@ -170,7 +170,7 @@ export const feelingsContent: FeelingCard[] = [
     icon: "/images/icons/tooMuch.png",
     alt: "I need to calm down",
     size: 30,
-    href: "/too-much",
+    href: "/comfort",
   },
 ];
 

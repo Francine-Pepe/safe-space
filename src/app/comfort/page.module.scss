@@ -43,11 +43,9 @@
 }
 
 .saved {
+  @include mixins.justify-center;
   width: 100%;
   max-width: 900px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -85,4 +83,14 @@
   .saved {
     gap: 1rem;
   }
+}
+
+@media (max-width: 420px) {
+  .saved {
+    @include mixins.flex-center-column;
+    width: 100vw;
+    gap: 1rem;
+  }
+
+  
 }

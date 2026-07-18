@@ -17,3 +17,9 @@
     transform: scale(0.98);
   }
 }
+
+@media screen and (max-width: 420px) {
+  .card {
+    box-sizing: 0;
+  }
+}
